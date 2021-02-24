@@ -1,0 +1,424 @@
+<html>
+<head>
+      <title>data visualize></title>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawStateChart);
+      google.charts.setOnLoadCallback(drawKarnatakaChart);
+      google.charts.setOnLoadCallback(drawAndraChart);
+      google.charts.setOnLoadCallback(drawTelanganaChart);
+
+      google.charts.setOnLoadCallback(drawHostelChart);
+      google.charts.setOnLoadCallback(drawTransportChart);
+      google.charts.setOnLoadCallback(drawModeChart);
+
+      google.charts.setOnLoadCallback(drawWeekChart);
+      google.charts.setOnLoadCallback(drawCoreChart);
+
+
+      function drawCoreChart()
+    {
+            var core_data = google.visualization.arrayToDataTable
+            ([
+            ['CORE','COUNT','SPOT','GAT-F','TOTAL','CAN','FINAL'],
+            ['CSE-R',420,566,17,583,162,421],
+            ['CSE-CS',60,72,13,85,25,60],
+            ['CSE-IOT',60,82,3,85,25,60],
+            ['CSE-AI',180,201,68,269,89,180],
+            ['CSE-DS',60,70,11,81,21,60],
+            ['CSE-TCS',60,83,3,86,26,60],
+            ['CSE(T)',840,1074,115,1189,348,841],
+            ['ECE-R',60,197,7,204,32,172],
+            ['ECE-VLSI',60,1,0,1,1,0],
+            ['ECE-IOT',60,0,0,0,0,0],
+            ['ECE-AI',60,66,4,90,20,70],
+            ['ECE(T)',240,284,11,295,53,242],
+            ['EEE-R',60,14,2,16,3,13],
+            ['RRR-R&D',0,0,0,0,0,0],
+            ['EEE(T)',60,14,2,16,3,13],
+            ['MECH-R',60,30,0,30,9,21],
+            ['MECH-SM',60,7,1,8,0,0],
+            ['MECH-E&HV',0,0,0,0,0,0],
+            ['MECH',120,37,1,38,9,29],
+            ['TOTAL',1320,1429,131,1560,421,1139]
+            ]);
+        
+        var core_option=
+        {
+            'title': "CORE STUDENT ANALYSIS",
+            'width':849,
+            'height':250,
+            'colorAxis': {colors: ['#ff0000', '#ff0040','#ff0080']}
+        }
+        var core_chart = new google.visualization.BubbleChart(document.getElementById('core_div'));
+        core_chart.draw(core_data, core_option);
+    } 
+
+    // ------------------------------------------------------------------------------------------------------------------------------------------------
+
+      function drawWeekChart()
+    {
+            var week_data = google.visualization.arrayToDataTable
+            ([
+            ['WEEK','2016-17','2017-18','2018-19','2019-20','2020-21'],
+            ['JAN(W1)',0,0,0,0,2],
+            ['JAN(W2)',0,0,0,0,3],
+            ['JAN(W3)',0,0,0,0,12],
+            ['JAN(W4)',0,0,0,0,5],
+            ['JAN',0,0,0,0,22],
+            ['FEB(W1)',0,0,0,0,6],
+            ['FEB(W2)',0,0,0,0,13],
+            ['FEB(W3)',0,0,0,0,3],
+            ['FEB(W4)',0,0,0,0,10],
+            ['FEB',0,0,0,0,32],
+            ['MAR(W1)',0,0,0,0,11],
+            ['MAR(W2)',0,0,0,0,6],
+            ['MAR(W3)',0,0,0,0,4],
+            ['MAR(W4)',0,0,0,0,8],
+            ['MAR',0,0,0,0,29],
+            ['APRIL(W1)',0,15,5,6,8],
+            ['APRIL(W2)',4,10,6,5,5],
+            ['APRIL(W3)',6,12,7,18,3],
+            ['APRIL(W4)',7,21,10,57,7],
+            ['APRIL',17,58,28,84,23],
+            ['MAY(W1)',26,41,29,89,10],
+            ['MAY(W2)',40,71,55,198,21],
+            ['MAY(W3)',115,85,106,95,20],
+            ['MAY(W4)',145,94,101,84,52],
+            ['MAY',326,291,291,466,102],
+            ['JUNE(W1)',113,81,122,18,192],
+            ['JUNE(W2)',0,52,68,3,39],
+            ['JUNE(W3)',63,37,43,30,47],
+            ['JUNE(W4)',41,72,28,32,44],
+            ['JUNE',217,242,259,123,327],
+            ['JUL(W1)',70,51,17,6,51],
+            ['JUL(W2)',17,19,17,50,35],
+            ['JUL(W3)',40,37,11,6,74],
+            ['JUL(W4)',56,28,5,67,46],
+            ['JUL',183,135,50,129,204],
+            ['AUG(W1)',32,28,18,73,52],
+            ['AUG(W2)',8,0,2,12,79],
+            ['AUG(W3)',0,0,6,5,49],
+            ['AUG(W4)',0,0,2,2,33],
+            ['AUG',40,28,28,92,213],
+            ['TOTAL',783,754,656,896,156]
+            
+            ]);
+        
+        var week_option=
+        {
+            'title': "YEAR_WISE_ANALYSIS",
+            'width':849,
+            'height':250,
+            'colorAxis': {colors: ['#ffbf00', '#bfff00','#ff8000']}
+        }
+        var week_chart = new google.visualization.BubbleChart(document.getElementById('week_div'));
+        week_chart.draw(week_data, week_option);
+    } 
+
+    // -----------------------------------------------------------------------------------------------
+
+
+
+
+      function drawModeChart()
+    {
+            var mode_data = google.visualization.arrayToDataTable
+            ([
+            ['MODE','M','F','T'],
+            ['GAT',111,28,139],
+            ['COMED-K',922,281,1203],
+            ['K-CET',135,70,205],
+            ['TOTAL',1168,379,1547]
+            ]);
+        
+        var mode_option=
+        {
+            'title': "ADMIN_EXAM_MODE",
+            'width':585,
+            'height':200,
+            'colorAxis': {colors: ['#ffbf00', '#bfff00','#ff8000']}
+        }
+        var mode_chart = new google.visualization.BubbleChart(document.getElementById('mode_div'));
+        mode_chart.draw(mode_data, mode_option);
+    } 
+
+// -------------------------------------------------------------------------------------------------------------
+    function drawTransportChart()
+    {
+            var transport_data = google.visualization.arrayToDataTable
+            ([
+            ['GENDER', 'EY','OY','EN','ON','TY','TN'],
+            ['MALE',36,8,838,134,44,972],
+            ['FEMALE',21,3,266,43,24,309],
+            ['TOTAL',57,11,1140,177,68,1281]
+            ]);
+        
+        var transport_option=
+        {
+            'title': "TRANSPORT REPORT",
+            'width':555,
+            'height':200,
+        }
+        var tansport_chart = new google.visualization.ColumnChart(document.getElementById('transport_div'));
+        tansport_chart.draw(transport_data, transport_option);
+    } 
+// ---------------------------------------------------------------------------------------------------------------------------------
+
+      function drawHostelChart()
+    {
+            var hostel_data = google.visualization.arrayToDataTable
+            ([
+            ['GENDER', 'EY','OY','EN','ON','TY','TN'],
+            ['MALE',799,125,75,30,924,105],
+            ['FEMALE',251,39,36,9,290,45],
+            ['TOTAL',1050,164,111,39,1214,150]
+            ]);
+        
+        var hostel_option=
+        {
+            'title': "HOSTEL REPORT",
+            'width':555,
+            'height':200,
+        }
+        var hostel_chart = new google.visualization.ColumnChart(document.getElementById('hostel_div'));
+        hostel_chart.draw(hostel_data, hostel_option);
+    }
+
+
+// -----------------------------------------------------------------------------------------------------------------
+
+      function drawTelanganaChart()
+    {
+            var telang_data = google.visualization.arrayToDataTable
+            ([
+            ['DISTRICT', 'E','O','T'],
+            ['Adlabad',0,0,0],
+            ['Kothagudam',0,0,0],
+            ['Hydrabad',36,1,37],
+            ['Jagtai',0,0,0],
+            ['Jangam',0,0,0],
+            ['Bhupalpaly',0,0,0],
+            ['Gadwal',2,0,2],
+            ['Kamaraddy',0,0,0],
+            ['Karamnagar',2,0,2],
+            ['Khammam',7,0,7],
+            ['Karuram_bheem',0,0,0],
+            ['Mahabubabad',0,0,0],
+            ['Mahabubnagar',10,0,10],
+            ['Mancherial',4,0,4],
+            ['Medak',1,0,1],
+            ['Medohal',1,0,1],
+            ['Motagu',0,0,0],
+            ['Nagarmool',0,0,0],
+            ['Nalgonda',9,0,9],
+            ['Narayanpet',0,0,0],
+            ['Nirmal',0,0,0],
+            ['Nizamabad',5,0,5],
+            ['Peddapali',0,0,0],
+            ['Rajarma_sincilla',0,0,0],
+            ['Rangareddy',17,0,17],
+            ['Sangareddy',0,0,0],
+            ['Siddipet',0,0,0],
+            ['Suryapet',0,0,0],
+            ['Vikarabad',0,0,0],
+            ['Wanaoarthy',0,0,0],
+            ['Warangal',12,0,12],
+            ['Bhvanagiri',0,0,0],
+            ]);
+        
+        var telang_option=
+        {
+            'title': "TELANGANA_DISTRICT'S_ANALYSIS",
+            'width':900,
+            'height':250
+        }
+        var telang_chart = new google.visualization.ColumnChart(document.getElementById('telang_div'));
+        telang_chart.draw(telang_data, telang_option);
+    }
+    
+    
+    // -------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+    function drawAndraChart() 
+    {
+
+        var andra_data = google.visualization.arrayToDataTable
+        ([
+          ['DISTRICT', 'E','O','T'],
+          ['Anantapur',281,43,324],
+          ['Chittor',238,11,249],
+          ['East_godavari',13,1,14],
+          ['Guntur',73,6,79],
+          ['Kadapa',215,9,224],
+          ['Krishna',21,2,23],
+          ['Kurnool',119,9,128],
+          ['Prakasam',99,1,100],
+          ['Nellore',73,7,80],
+          ['Srikakulum',7,0,7],
+          ['Vishakapatnam',11,0,11],
+          ['Vizianagaram',1,0,1],
+          ['West_godavari',14,3,17]
+        ]);
+        var andra_option = 
+        {
+            'title': "ANDRAPRADESH_DISTRICT'S_ANALYSIS",
+            'width':900,
+            'height':250
+        };
+        var andra_chart = new google.visualization.ColumnChart(document.getElementById('andra_div'));
+        andra_chart.draw(andra_data, andra_option);
+    } 
+
+
+    // --------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+    function drawKarnatakaChart()
+    {
+            var karnataka_data = google.visualization.arrayToDataTable
+            ([
+            ['DISTRICT', 'E','O','T'],
+            ['Bagalkot',1,0,1],
+            ['Bellary',20,3,23],
+            ['Belgaum',1,0,1],
+            ['Banglore_rural',47,32,79],
+            ['Banglore_urban',57,11,68],
+            ['Bidar',2,0,2],
+            ['Chamaraja_nagar',0,0,0],
+            ['Chikkabalapur',14,0,14],
+            ['Chik_manglore',0,0,0],
+            ['Chitradurga',2,0,2],
+            ['Dakshin_kannada',0,0,0],
+            ['Davengere',1,0,1],
+            ['Dharwad',0,0,0],
+            ['Gadag',0,0,0],
+            ['Gulbarga',1,0,1],
+            ['Hassan',1,0,1],
+            ['Haveri',0,0,0],
+            ['Kodagu',1,0,1],
+            ['Kolar',8,0,8],
+            ['Koppal',10,0,10],
+            ['Mandya',3,0,3],
+            ['Mysore',2,0,2],
+            ['Raichur',18,0,18],
+            ['Ramnagar',0,0,0],
+            ['Shimoga',1,0,1],
+            ['Tumkur',6,0,6],
+            ['Udupi',0,0,0],
+            ['Uttar_karnataka',1,0,1],
+            ['Vijaypur',0,0,0],
+            ['Yadgiri',6,0,6]
+            ]);
+        
+        var karnataka_option=
+        {
+            'title': "KARNATAKA_DISTRICT'S_ANALYSIS",
+            'width':900,
+            'height':250
+        }
+        var karnataka_chart = new google.visualization.ColumnChart(document.getElementById('karnataka_div'));
+        karnataka_chart.draw(karnataka_data, karnataka_option);
+    }
+    
+
+    // ----------------------------------------------------------------------------------------------------------------------------------------
+    
+    
+    
+    function drawStateChart() 
+    {
+
+        var state_data = google.visualization.arrayToDataTable
+        ([
+          ['STATES', 'ENGINEERING','OTHERS','TOTAL'],
+          ['Andra_pradesh',1165,92,1257],
+          ['Karnataka',203,46,249],
+          ['Telangana',106,1,107],
+          ['Tamil_nadu',4,1,5],
+          ['Maharashtra',3,0,3],
+          ['Bihar',2.1,0,2],
+          ['Gujarath',2.1,0,2],
+          ['Kerala',2.1,0,2],
+          ['Uttar_pradesh',0,2.1,2],
+          ['Punjab',2.1,0,2],
+          ['West_bengal',1,0,1],
+          ['Arunchal_pradesh',0,0,0],
+          ['Assam',0,0,0],
+          ['Chattisgarh',0,0,0],
+          ['Goa',0,0,0],
+          ['Haryana',0,0,0],
+          ['Himachal_pradesh',0,0,0],
+          ['Jharkhand',0,0,0],
+          ['Madhya_pradesh',0,0,0],
+          ['Manipur',0,0,0],
+          ['Meghalaya',0,0,0],
+          ['Mizoram',0,0,0],
+          ['Nagaland',0,0,0],
+          ['Odisha',0,0,0],
+          ['Rajastan',0,0,0],
+          ['Sikkim',0,0,0],
+          ['Tripura',0,0,0],
+          ['Utarkhand',0,0,0]
+        ]);
+        var state_option = 
+        {
+            'title': 'STATE_WISE_ANALYSIS',
+            'width':800,
+            'height':500,
+            'pieStartAngle': 100
+        };
+        var state_chart = new google.visualization.PieChart(document.getElementById('state_div'));
+        state_chart.draw(state_data, state_option);
+    } 
+
+    
+    </script>
+    
+</head>
+<body>
+
+<h2 align="center" style="background-color:#00ffff;"><em>DATA VISUALIZATION</em> </h2>
+
+<table border="3">
+    <tr>
+        <td><div id="core_div"></div></td>
+        <td><div id="week_div"></div></td>
+    </tr>
+</table>
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<table border="2">
+        <tr>
+            <td rowspan="4"><div id="state_div"></div></td>
+            <td><div id="karnataka_div"></div></td>
+        <tr>
+        <tr>      
+            <td><div id="andra_div"></div></td>
+        </tr>
+        <tr>    
+            <td><div id="telang_div"></div></td>
+        </tr>
+ </table>
+ <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+ <table border="2">
+    <tr>
+        <td><div id="hostel_div"></div></td>
+        <td> <div id="mode_div"></div></td>
+        <td><div id="transport_div"></div></td>
+</table> 
+
+<h2 align="right" style="background-color:#00ffff;"><em><b>@gitam_university</b></em></h2>
+    
+   
+    
+    
+</body>
+</html>
+
+
+
+
+
